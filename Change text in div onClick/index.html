@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+.insert {
+     display: block;
+     background-color:lightblue;
+     padding: 5px;
+     width: 150px;
+     height: 50px;
+}
+.text1, .text2, .text3 {
+  display:none;
+}
+</style>
+<script>
+  var text1 = document.querySelector('.text1');
+  var text2 = document.querySelector('.text2');
+  var text3 = document.querySelector('.text3');
+
+  var insert = document.querySelector('.insert');
+
+  document.getElementById('text1').onclick = function() {
+      insert.innerHTML = '';
+      insert.innerHTML = text1.innerHTML;
+  };
+  document.getElementById('text2').onclick = function() {
+      insert.innerHTML = '';
+      insert.innerHTML = text2.innerHTML;
+  };
+  document.getElementById('text3').onclick = function() {
+      insert.innerHTML = '';
+      insert.innerHTML = text3.innerHTML;
+  };
+</script>
+</head>
+<body>
+<a href="#" id="text1">Bears</a>
+<a href="#" id="text2">Lions</a>
+<a href="#" id="text3">Cats</a>
+
+<div class="insert"> </div>
+
+  <div class="text1">Текст о медведях</div>
+  <div class="text2">Текст о львах</div>
+  <div class="text3">Текст о кошках</div>
+</body>
+</html>
